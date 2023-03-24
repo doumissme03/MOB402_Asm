@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row p-5">
+
+        {{!-- Card --}}
+        <div class="card mx-auto justify-content-center" style="width:500px">
+            {{!-- Img --}}
+            <img class="card-img" src={{product.img}} alt="Card image">
+            {{!-- Content --}}
+            <div class="card-body">
+                <h4 class="card-title">Name: {{product.name}}</h4>
+                <p class="card-text">Price: {{product.price}}</p>
+                <p class="card-text">Count: {{product.count}}</p>
+                <p class="card-text text-white" style="background-color: {{product.color}};">Color: {{product.color}}</p>
+                <p class="card-text">Category: {{product.category}}</p>
+                <a href="/products/list" class="btn btn-primary" >Back</a>
+            </div>
+        </div>
+
+
+    </div>
+</div>

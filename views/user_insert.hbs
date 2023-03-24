@@ -1,0 +1,46 @@
+<div class="container w-50 p-5 my-5 shadow">
+
+
+    {{!-- Form --}}
+    <form method="post" action="/users/insert">
+
+        {{!-- Button --}}
+        <div class="row mb-3">
+            <a href="/users/list" class="btn btn-dark col-auto me-auto"><i class="fa-solid fa-arrow-left"></i> Back</a>
+            <code class="mx-auto col-auto">{{notify}}</code>
+            <button type="submit" class="btn btn-primary col-auto ms-auto">Add new User</button>
+        </div>
+
+        {{!-- Input --}}
+        <div class="mb-3">
+            <label class="form-label">Full name</label>
+            <input name="full_name" type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input name="email" type="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Link Avatar</label>
+            <input name="avatar" type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input name="phone_number" type="text" class="form-control">
+            <div class="form-text text-end">Option</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Address</label>
+            <input name="address" type="text" class="form-control">
+            <div class="form-text text-end">Option</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Order</label>
+            <input name="order" type="text" class="form-control">
+            <div class="form-text text-end">Option</div>
+        </div>
+
+    </form>
+
+
+</div>

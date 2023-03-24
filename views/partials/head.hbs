@@ -1,0 +1,74 @@
+<div class="row">
+
+
+    {{!-- Nav bar --}}
+    <nav class="navbar navbar-expand-md navbar-light bg-light shadow px-3">
+        <div class="container-fluid">
+
+            {{!-- collapse button --}}
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            {{!-- Nav bar --}}
+            <div class="collapse navbar-collapse">
+                {{!-- Left --}}
+                <a class="navbar-brand" {{#if isAccess}}href="/users/list" {{else}}href="/" {{/if}}>
+                    <img src="/img/logo.png" alt="Avatar Logo" width="88px" class="">
+                </a>
+                
+                {{!-- Center --}}
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link {{#if userActive}}active{{/if}}" {{#if isAccess}}href="/users/list" {{else}}href="/"
+                            {{/if}}>User</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{#if productActive}}active{{/if}}" {{#if isAccess}}href="/products/list" {{else}}href="/"
+                            {{/if}}>Product</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Statistic</a>
+                        <ul class="dropdown-menu">
+                            <li><button class="btn dropdown-item" href="#"><i class="fa-solid fa-coins"></i> Profit</button>
+                            </li>
+                            <li><button class="btn dropdown-item" href="#"><i class="fa-solid fa-chart-column"></i>
+                                    Revenue</button></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                {{!-- Right --}}
+                {{#if isAccess}}
+                <ul class="navbar-nav ">
+                    <li class="nav-item my-auto">
+                        <a class="nav-link active" href="#"><i class="fa-regular fa-bell align-middle"></i></a>
+                    </li>
+                    <li class="nav-item dropdown  ">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"><img src="/img/hi.gif"
+                                alt="Avatar Logo" style="width:36px;" class="rounded-circle"></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="btn dropdown-item " href="/"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign out</a>
+                            </li>
+                            <li><a class="btn dropdown-item" href="#"><i class="fa-solid fa-gears"></i>
+                                    Settings</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                {{else}}
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link btn  border-dark mx-1 {{#if signInActive}}active{{/if}}" href="/admins/sign_in">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn  border-dark mx-1 {{#if signUpActive}}active{{/if}}" href="/admins/sign_up">Sign up</a>
+                    </li>
+                </ul>
+                {{/if}}
+            </div>
+            
+        </div>
+    </nav>
+
+
+</div>

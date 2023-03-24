@@ -1,0 +1,44 @@
+<div class="container w-50 p-5 my-5 shadow">
+
+
+    {{!-- Form --}}
+    <form method="post" action="/products/create">
+        {{!-- Button --}}
+        <div class="row mb-3">
+            <a href="/products/list" class="btn btn-dark col-auto me-auto"><i class="fa-solid fa-arrow-left"></i> Back</a>
+            <code class="mx-auto col-auto">{{notify}}</code>
+            <button type="submit" class="btn btn-primary col-auto ms-auto">Add new Product</button>
+        </div>
+
+        {{!-- Input --}}
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input name="name" type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Price</label>
+            <input name="price" type="number" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Link Image</label>
+            <input name="img" type="text" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Count</label>
+            <input name="count" type="number" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Color</label>
+            <input name="color" type="color" class="form-control">
+            <div class="form-text text-end">Option</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Category</label>
+            <input name="category" type="text" class="form-control">
+            <div class="form-text text-end">Option</div>
+        </div>
+
+    </form>
+
+    
+</div>
