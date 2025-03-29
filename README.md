@@ -1,5 +1,4 @@
 # MOB402_Asm
-Lee Manh Thai - PH27046
 
 #Sign in
 ![image](https://user-images.githubusercontent.com/93104678/227402064-e24ea4e0-3bd5-430e-bce5-a8c0eff36593.png)
